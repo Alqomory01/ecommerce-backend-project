@@ -1,0 +1,576 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mart.py || Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+  </head>
+<body>
+    <style>
+        img{
+            width:95% !important;
+            height: 80vh !important;
+            padding:0 20px;
+            object-fit:cover;
+        }
+        .menu{
+          color:white;
+        }
+        .menu:hover{
+          color:grey;
+        }
+        a{
+          color:white
+        }
+        .myclass{
+          width:100%;
+
+        }
+        .container{
+          width: 100%;
+        }
+    </style>
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-dark .text-white">
+            <div class="container-fluid">
+              <a class="navbar-brand menu" href="#">HALLAL FOOD</a>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="mynav">
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link  menu" aria-current="page" href="#">Welcome {{ user.username }}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  menu" aria-current="page" href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="{% url 'ourshop' %}">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="{% url 'order' %}">Order</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  menu" href="{% url 'login' %}" >Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  menu" href="{% url 'myshop' %}" >SignUp</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  menu" href="{% url 'logout' %}" >Log Out</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-info"> <i class="bi bi-cart3 px-1"></i> My Cart</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </nav>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'assets/img/sharwarma.jpg' %}" class="d-block w-100" alt="sharwarma">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'assets/img/iced-lemon-tea.jpg' %}" class="d-block w-100" alt="spaghetti">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'assets/img/bright-party-elegant-mocktail-background.jpg' %}" class="d-block w-100" alt="Hamburger">
+              </div>
+            </div>
+          </div>
+
+          
+    </header>
+<main>
+    <div class="container text-center mt-5">
+        <div class="row row-cols-4">
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/bright-party-elegant-mocktail-background.jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/chocolate.jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/saladcream.jpeg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+          <div class="col mb-4"  ><div class="card pt-3" style="width: 18rem; height:25rem">
+            <img src="{% static 'assets/img/10 Best Fast Foods For Weight Watchers (1).jpg' %}" class="d-block w-100" alt="sharwarma">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="container text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  price
+                </div>
+                <div class="col">
+                  $30
+                </div>
+               
+              </div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+</main>
+
+<div class="container mt-5 ">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white myclass"
+          style="background-color: #0f0f0f; width:100%"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">ABOUT US</h5>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae modi cum ipsam ad, illo possimus laborum ut
+              reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+              Reiciendis assumenda iusto sapiente inventore animi?
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase">Get exclusive offers and first access to or discounts & promos</h6>
+
+            <div class="row mb-3">
+              <!-- <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label> -->
+              <div class="col-sm-10">
+                <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Your Name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <!-- <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label> -->
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="colFormLabel" placeholder="Your Email">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </div>
+          
+  
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="mb-4" />
+
+      <!-- Section: CTA -->
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Register for free</span>
+          <button type="button" class="btn btn-outline-light btn-rounded">
+            Sign up!
+          </button>
+        </p>
+      </section>
+      <!-- Section: CTA -->
+
+      <hr class="mb-4" />
+
+      <!-- Section: Social media -->
+      <section class="mb-4 text-center">
+        <!-- Facebook -->
+        <a
+           class="btn btn-outline-light btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-facebook-f"></i
+          ></a>
+
+        <!-- Twitter -->
+        <a
+           class="btn btn-outline-light btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-twitter"></i
+          ></a>
+
+        <!-- Google -->
+        <a
+           class="btn btn-outline-light btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-google"></i
+          ></a>
+
+        <!-- Instagram -->
+        <a
+           class="btn btn-outline-light btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-instagram"></i
+          ></a>
+
+        <!-- Linkedin -->
+        <a
+           class="btn btn-outline-light btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+        <!-- Github -->
+        <a
+           class="btn btn-outline-light btn-floating m-1"
+           href="#!"
+           role="button"
+           ><i class="fab fa-github"></i
+          ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-white" href="https://Alqomory.com/"
+         >Alqomory</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
